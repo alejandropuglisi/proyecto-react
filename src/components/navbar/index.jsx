@@ -10,11 +10,6 @@ const NavbarComponent = () => {
             <Nav className="mr-auto dropdown">
                 <button type="button" class="btn hover">Inicio</button>
                 <button type="button" class="btn dropdown-toggle hover" data-toggle="dropdown" data-hover="dropdown">Productos</button>
-                <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-                    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                </NavDropdown>
                 <button type="button" class="btn dropdown-toggle hover active" data-toggle="dropdown">Salud</button>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="#">Link 1</a>
