@@ -1,0 +1,40 @@
+.hover {
+    color: rgb(228, 218, 87);
+    font-size: 95%;
+    margin-right: 10%;
+}
+
+.hover:hover {
+    background-color: rgb(228, 218, 87);
+    color: #000;
+}
+
+.hover:focus {
+    border-color: yellow;
+    box-shadow: none;
+    outline: none;
+}
+
+#search-button {
+    border-color: rgb(228, 218, 87);
+    background-color: #000;
+    color:rgb(228, 218, 87);
+}
+
+.navbar {
+    height: 10em;
+    background-color: #000;
+}
+
+.logo {
+    height: 100%;
+    width: 20%;
+    margin-right: 2em;
+}
+
+.pata {
+    height: 30%;
+    width: 3%;
+    display: block;
+    margin: auto;
+}
