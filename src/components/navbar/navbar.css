@@ -1,7 +1,11 @@
 .hover {
     color: rgb(228, 218, 87);
     font-size: 95%;
-    margin-right: 10%;
+    background-color: #000;
+    border: none;
+    outline: none;
+    text-align: center;
+    margin-right: 2.5em;
 }
 
 .hover:hover {
@@ -9,16 +13,19 @@
     color: #000;
 }
 
-.hover:focus {
-    border-color: yellow;
-    box-shadow: none;
-    outline: none;
+.dropdown {
+    text-align: center;
 }
 
 #search-button {
     border-color: rgb(228, 218, 87);
     background-color: #000;
     color:rgb(228, 218, 87);
+}
+
+#search-button:hover {
+    background-color: rgb(228, 218, 87);
+    color: #000;
 }
 
 .navbar {
@@ -28,13 +35,18 @@
 
 .logo {
     height: 100%;
-    width: 20%;
+    width: 15%;
     margin-right: 2em;
 }
 
 .pata {
-    height: 30%;
+    height: 25%;
     width: 3%;
     display: block;
-    margin: auto;
+    margin-right: 2.5em;
+}
+
+.cart {
+    font-size: 1.5em;
+    margin-left: 4em;
 }

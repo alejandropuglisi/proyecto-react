@@ -1,28 +1,49 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
+import { Navbar, Form, FormControl, Button} from 'react-bootstrap';
 import './navbar.css';
+import {Dropdown, DropdownItem, DropdownMenu, DropdownToggle} from 'reactstrap'
+import { useState } from 'react';
+import CartWidgetComponent from './cartWidget';
 
 const NavbarComponent = () => {
+    const [dropdownOpen, setDropdownOpen] = useState (false);
+
+    const toggle = () => setDropdownOpen (prevState => !prevState);
+ 
   return (
     <>
-        <Navbar variant="dark">
+        <Navbar>
             <img className="logo" src="/images/logo.png" alt="Logo"/>
-            <Nav className="mr-auto dropdown">
-                <button type="button" class="btn hover">Inicio</button>
-                <button type="button" class="btn dropdown-toggle hover" data-toggle="dropdown" data-hover="dropdown">Productos</button>
-                <button type="button" class="btn dropdown-toggle hover active" data-toggle="dropdown">Salud</button>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Link 1</a>
-                        <a class="dropdown-item" href="#">Link 2</a>
-                        <a class="dropdown-item" href="#">Link 3</a>
-                    </div>
-                    <button type="button" class="btn hover">Adiestramiento</button>
-            </Nav>
+            <Button className="text-nowrap hover">Inicio</Button>
+            <Dropdown isOpen={dropdownOpen} toggle={toggle}>
+                <DropdownToggle caret className="hover">Productos</DropdownToggle>
+                <DropdownMenu>
+                    <DropdownItem header>Perros</DropdownItem>
+                    <DropdownItem>Link 1</DropdownItem> 
+                    <DropdownItem>Link 1</DropdownItem>
+                    <DropdownItem>Link 1</DropdownItem>
+                    <DropdownItem divider />
+                    <DropdownItem header>Gatos</DropdownItem>
+                    <DropdownItem>Link 1</DropdownItem> 
+                    <DropdownItem>Link 1</DropdownItem>
+                    <DropdownItem>Link 1</DropdownItem>
+                </DropdownMenu>
+            </Dropdown>
+            <Dropdown isOpen={dropdownOpen} toggle={toggle}>
+                <DropdownToggle caret className="hover">Salud</DropdownToggle>
+                <DropdownMenu>
+                    <DropdownItem>Link 1</DropdownItem> 
+                    <DropdownItem>Link 1</DropdownItem>
+                    <DropdownItem>Link 1</DropdownItem>
+                </DropdownMenu>
+            </Dropdown>
+            <Button type="button" className="hover">Adiestramiento</Button>
             <img className="pata" src="/images/pata.png" alt="pata"/>
             <Form inline>
                 <FormControl type="text" placeholder="Búsqueda" className="mr-sm-2" />
                 <Button id="search-button">Buscar</Button>
             </Form>
+            <CartWidgetComponent />
         </Navbar>
     </>
   );
