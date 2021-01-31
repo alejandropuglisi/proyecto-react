@@ -1,6 +1,13 @@
+import ItemCountComponent from "./ItemCount";
+
 const ItemListContainerComponent = ({greeting}) => {
     return (
-        <h1 style={{fontSize: "4em", textAlign: "center", marginTop: "0.5em"}}>{greeting}</h1>
+        <>
+            <ItemCountComponent initial="0"/>
+            <div className="container-count">
+                <button className="addToCart">{greeting}</button>
+            </div>
+        </>
     )
 }
 

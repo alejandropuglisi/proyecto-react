@@ -1,0 +1,25 @@
+.buttonAdd, .counter, .addToCart {
+    width: 2em;
+    height: 2em;
+    text-align: center;
+    background-color: #000;
+    color:rgb(228, 218, 87);
+    border: 2px solid rgb(228, 218, 87);
+}
+
+.counter {
+    width: 6em;
+    margin: 0;
+}
+
+.container-count {
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+.addToCart {
+    font-size: 1em;
+    width: 10em;
+    height: 2em;
+}

@@ -50,3 +50,8 @@
     font-size: 1.5em;
     margin-left: 4em;
 }
+
+.dropdownProducts {
+    width: 30em;
+    border-radius: 2em;
+}
